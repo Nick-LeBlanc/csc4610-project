@@ -3,16 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './Styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Stages from "./Pages/Stages";
-import Characters from "./Pages/Characters";
-import Players from "./Pages/Players"
-import SpecChar from './Pages/specChar';
-import SpecStage from './Pages/specStage';
-import SpecPlayer from './Pages/specPlayer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from './Pages/Login';
+import MoviePage from './Pages/MoviePage'
 import NavBar from './Component/NavBar';
 
-
+//https://colorhunt.co/palette/b3ffaef8ffdbff6464ff7d7d 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,12 +16,8 @@ root.render(
     <NavBar />
     <Routes>
       <Route path="/" element={<App />}/>
-      <Route path="Characters" element={<Characters />} />  
-        <Route path="Characters/:name" element={<SpecChar />} />
-      <Route path="Stages" element={<Stages />} />
-        <Route path="Stages/:name" element={<SpecStage />} /> 
-      <Route path="Players" element={<Players />} />
-        <Route path="Players/:name" element={<SpecPlayer />} />
+      <Route path="Login" element={<Login />} />
+      <Route path="MoviePage" element={<MoviePage />} />
       <Route path="*" element={<main style={{ padding: "1rem" }}><p>There's nothing here!</p></main>}/>
 
     </Routes>

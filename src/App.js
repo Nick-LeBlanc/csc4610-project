@@ -1,11 +1,18 @@
 import './Styles/App.css';
-import { Link, Outlet } from "react-router-dom";
 
 function App() {
 
   return (
-    <main>
-    intro
+    <main class="App">
+      <h2>
+      WELCOME TO NICK'S FLICKS
+      </h2>
+      <div>
+        <a class="Bold">THE</a> Movie Database
+      </div>
+      <div>
+        <div> </div>
+      </div>
     </main>
   );
 }
