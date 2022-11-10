@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './Styles/index.css';
-import App from './App';
+import HomePage from './Pages/HomePage';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './Pages/Login';
 import MoviePage from './Pages/MoviePage'
 import NavBar from './Component/NavBar';
 
@@ -15,8 +14,7 @@ root.render(
   <BrowserRouter>
     <NavBar />
     <Routes>
-      <Route path="/" element={<App />}/>
-      <Route path="Login" element={<Login />} />
+      <Route path="/" element={<HomePage />}/>
       <Route path="MoviePage" element={<MoviePage />} />
       <Route path="*" element={<main style={{ padding: "1rem" }}><p>There's nothing here!</p></main>}/>
 
