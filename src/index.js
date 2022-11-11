@@ -6,20 +6,22 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MoviePage from './Pages/MoviePage'
 import NavBar from './Component/NavBar';
+import { AuthProvider } from './context/AuthProvider';
 
 //https://colorhunt.co/palette/b3ffaef8ffdbff6464ff7d7d 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <AuthProvider>
   <BrowserRouter>
     <NavBar />
     <Routes>
-      <Route path="/" element={<HomePage />}/>
-      <Route path="MoviePage" element={<MoviePage />} />
+    <Route path="/" element={<HomePage />} />  
+      <Route path="/:name" element={<MoviePage />} />
       <Route path="*" element={<main style={{ padding: "1rem" }}><p>There's nothing here!</p></main>}/>
 
     </Routes>
   </BrowserRouter>
+  </AuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
