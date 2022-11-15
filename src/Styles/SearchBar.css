@@ -1,0 +1,29 @@
+.searchBar{
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.SubmitForm{
+    margin: auto;
+    text-align: center;
+}
+
+.SubmitButton{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.SubmitButton:active{
+    background-color: #1a3a1b;   
+}

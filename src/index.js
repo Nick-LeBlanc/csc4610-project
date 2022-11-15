@@ -1,27 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Styles/index.css';
-import HomePage from './Pages/HomePage';
+import './styles/index.css';
+import App from './App';
+import MoviePage from './MoviePage'
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MoviePage from './Pages/MoviePage'
-import NavBar from './Component/NavBar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from './context/AuthProvider';
 
-//https://colorhunt.co/palette/b3ffaef8ffdbff6464ff7d7d 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AuthProvider>
-  <BrowserRouter>
-    <NavBar />
+  <React.StrictMode>
+    <AuthProvider>
+    <BrowserRouter>
     <Routes>
-    <Route path="/" element={<HomePage />} />  
+    <Route path="/" element={<App />} />  
       <Route path="/:name" element={<MoviePage />} />
       <Route path="*" element={<main style={{ padding: "1rem" }}><p>There's nothing here!</p></main>}/>
-
     </Routes>
-  </BrowserRouter>
-  </AuthProvider>
+    </BrowserRouter>
+    </AuthProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
