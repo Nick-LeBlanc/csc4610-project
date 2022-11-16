@@ -5,6 +5,8 @@ export default function RatingForm({rating, movie_id}){
 
     let [input, setInput] = useState();
     const {auth} = useContext(AuthContext);
+    let [updateMessage, changeUpdateMessage] = useState(<></>);
+    let [rate, changeRate] = useState(<></>);
 
 
     async function handleSubmit(e){
@@ -24,32 +26,32 @@ export default function RatingForm({rating, movie_id}){
             .then(data => {});  
           } catch (error) {
             console.log('it didnt work');
-          } 
+          }
+          changeUpdateMessage(<div>Thanks for rating!</div>)
     }
 
-    async function getAvg(){
-
+    function showRating(){
+      if(rating !== -1){
+        return (<div>{rating}</div>)
+      }
     }
 
-    if(rating == -1){
+    useEffect(() => {
+      if(rating !== -1){
+        changeRate(<>{rating}</>)
+      }
+    },[rating]);
+
         return (
         <div>
+          <div>You rated this movie: {rate}</div>
             <form onSubmit={handleSubmit}>
                 <span>How would you rate this movie: </span>
                 <input type='range' min="1" max="100" className="slider" onChange={(e) =>{setInput(e.target.value / 10)}}></input>
                 <button>Rate</button>
             </form>
             <br></br><div>{input}</div>
-
-        </div>)
-    }
-    return(
-        <div>
-        {rating}
-        <br></br>
-        <span>
-            Rate Again: 
-        </span>
+            {updateMessage}
         </div>
-    )
+        )
 }

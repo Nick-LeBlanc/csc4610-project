@@ -13,7 +13,7 @@ export default function SearchBar(){
                 .then(response => response.json())
                 .then(data => {
                     if(JSON.stringify(data) !== "[]"){
-                        console.log(JSON.stringify(data));
+                        //console.log(JSON.stringify(data));
                         setMessage(<div></div>);
                         navigate("/" + e.target.searchBar.value)
                     }else{
