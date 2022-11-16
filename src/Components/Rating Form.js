@@ -38,13 +38,13 @@ export default function RatingForm({rating, movie_id}){
 
     useEffect(() => {
       if(rating !== -1){
-        changeRate(<>{rating}</>)
+        changeRate(<>You rated this movie: {rating}</>)
       }
     },[rating]);
 
         return (
         <div>
-          <div>You rated this movie: {rate}</div>
+          {rate}
             <form onSubmit={handleSubmit}>
                 <span>How would you rate this movie: </span>
                 <input type='range' min="1" max="100" className="slider" onChange={(e) =>{setInput(e.target.value / 10)}}></input>
