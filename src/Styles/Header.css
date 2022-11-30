@@ -3,16 +3,16 @@
     display: flex;
     justify-content: center;
     padding-left: 25%;
+    background-color: #F8FFDB;
 }
 
 .Link{
-    color: black;
+    color: #FF6464;
 }
 .Link:link { text-decoration: none; }
 .Link:visited { text-decoration: none; }
 .Link:hover { text-decoration: none; }
 .Link:active { text-decoration: none; }
-
 
 .profile{
     height: 3%;

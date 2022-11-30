@@ -9,12 +9,13 @@
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
     max-width: 300px;
+    background-color: #B3FFAE;
 }
 .MovieList:hover,
 .MovieList:focus,
 .MovieList:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #FF7D7D;
+  border-color: #F8FFDB;
 }
 
 
@@ -24,4 +25,9 @@
     justify-content: center;
     flex-wrap: wrap;
     max-width: 100%;
-}   
+    background-color: #F8FFDB;
+}
+
+html{
+  background-color: #F8FFDB;
+}

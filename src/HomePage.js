@@ -19,11 +19,11 @@ function HomePage() {
   },[]);
 
   return (
+    <div className='Test'>
     <main className='MoviePage'>
       {/* {console.log(movies)} */}
         <Header/>
         <br></br>
-        <div>{auth.user_id}</div>
         <div className='container'>
         {movies.map((movie, index) =>(
           <Link to={movie.title} className='MovieList' key={index}>
@@ -34,6 +34,7 @@ function HomePage() {
         ))}
         </div>
     </main>
+    </div>
   );
 }
 

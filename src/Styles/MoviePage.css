@@ -1,18 +1,56 @@
 .MoviesName{
-    margin-right: auto;
     width: 10%;
     padding: 5px;
     margin-left: 5%;
-    border: 3px solid green;
     border-radius: 10px;
+    text-align: center;
 }
 
 .MovieContainer{
     text-align: center;
     justify-content: center;
+    background-color: #F8FFDB;
 }
 
 .MovieOverview{
-    border: 3px solid green;
+    border: 3px solid #FF6464;
     margin: 5px;
+    border-radius: 5px;
+    padding: 5px;
 }
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.styled-table thead tr {
+    background-color: #FF7D7D;
+    color: #ffffff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #FF7D7D;
+}
+
